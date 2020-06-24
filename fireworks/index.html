@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fireworks</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<audio id="fw_audio" src="./audio/fireworks.mp3" loop="loop"></audio>
+<h1>Happy Birthday <div id="name"></div></h1>
+<canvas id="birthday"></canvas>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script>
+    var array = ['Jaan ','Jannudi ','Bhondhdu ','Yedo ','Rowdy ',];
+    var emojis = ['😍❣️💖','🥰😍','😂🤓😥','😁😍🤪','😎😠😎🙆']
+    var i = 0;
+    var nameH1 = document.getElementById('name');
+      setInterval(function () {
+        name = array[i%array.length] + emojis[i % emojis.length];
+        nameH1.textContent = name;
+        i++;
+      }, 2000);s
+      window.onload = function () {
+          document.getElementById("fw_audio").play();
+        }
+  </script>
+</body>
+</html>
